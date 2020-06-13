@@ -30,13 +30,13 @@ io.on('connection', (socket) => {
       io.to(socket.id).emit('ROOM_FULL', null)
 
       // Notify room that someone tried to join
-      socket.broadcast.to(roomName).emit('INTRUSION_ATTEMPT', null)
+      socket.broadcast.to(roomName).emit('CONTAINMENT BREACH!!! ', null)
     } else {
       // Leave current room
       socket.leave(currentRoom)
 
       // Notify room that user has left
-      socket.broadcast.to(currentRoom).emit('USER_DISCONNECTED', null)
+      socket.broadcast.to(currentRoom).emit('LOSER LEFT!', null)
 
       // Join new room
       currentRoom = roomName
@@ -46,7 +46,7 @@ io.on('connection', (socket) => {
       io.to(socket.id).emit('ROOM_JOINED', currentRoom)
 
       // Notify room that user has joined
-      socket.broadcast.to(currentRoom).emit('NEW_CONNECTION', null)
+      socket.broadcast.to(currentRoom).emit('NEWBIE!', null)
     }
   })
 
@@ -63,12 +63,12 @@ io.on('connection', (socket) => {
 
   /** Broadcast a disconnection notification to the room */
   socket.on('disconnect', () => {
-    socket.broadcast.to(currentRoom).emit('USER_DISCONNECTED', null)
+    socket.broadcast.to(currentRoom).emit('Some AssHat Left.', null)
   })
 })
 
 // Start server
 const port = process.env.PORT || 3000
 http.listen(port, () => {
-  console.log(`Chat server listening on port ${port}.`)
+  console.log(`Chat server is up bro you'r good ${port}.`)
 })
