@@ -40,7 +40,12 @@ this is good and all but its only local and only useable from the same network a
 
 so we are gonna use the beauty of tor to open it up to everyone!
 
-first. install orbot on android.
+
+make a new termux session and use tor
+it should start just fine
+
+
+then. install orbot on android.
 
 then press the 3 dots button
 
