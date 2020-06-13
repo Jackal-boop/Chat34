@@ -36,6 +36,8 @@ node app.js
 
 Great! you made a chat server. it can be acseesed by localhost:3000
 
+if you only want people on your current network to use it just take your host ip and add a :3000 to the end of it
+
 this is good and all but its only local and only useable from the same network as the host
 
 so we are gonna use the beauty of tor to open it up to everyone!
