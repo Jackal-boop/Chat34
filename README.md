@@ -19,6 +19,44 @@ The concepts that we are covering in this tutorial are implemented in Javascript
 
 > Disclaimer - This is meant to be a primer in end-to-end encryption implementation, not a definitive guide to building the Fort Knox of browser chat applications. I've worked to provide useful information on adding cryptography to your Javascript applications, but I cannot 100% guarantee the security of the resulting app.  There's a lot that can go wrong at all stages of the process, especially at the stages not covered by this tutorial such as setting up web hosting and securing the server(s).  If you are a security expert, and you find vulnerabilities in the tutorial code, please feel free to reach out to me by email (patrick.triest@gmail.com) or in the comments section below.
 
+
+Time for the install guide. i found multiple non usefull guides for how to setup chat servers with this tool and wanna make a good one.
+
+first download the dependencies
+
+Android/Termux:pkg upgrade && pkg install -y vim git nodejs tor torsocks curl
+
+Then Clone: git clone https://github.com/Jackal-boop/Chat34.git
+
+after that your gonna wanna start the chat server 
+
+cd Open-Cryptochat
+npm install
+node app.js
+
+Great! you made a chat server. it can be acseesed by localhost:3000
+
+this is good and all but its only local and only useable from the same network as the host
+
+so we are gonna use the beauty of tor to open it up to everyone!
+
+first. install orbot on android.
+
+then press the 3 dots button
+
+go to user services
+
+add a port 3000 service.
+
+YEAH! your done! tap on the service to get the URL to the site
+
+
+
+
+
+
+
+
 To read more, visit - https://github.com/triestpa/Open-Cryptochat
 
 ___
